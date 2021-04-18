@@ -3,7 +3,7 @@ Solves the multiple knapsack problem with a greedy algorithm.
 
 This program was originally intended for a coding challenge of GetInIT GmbH and BWI, but can also be useful for productive use.
 ## Preview
-![](Assets/preview.gif)
+![](assets/preview.gif)
 
 ## Clone🔄
 > You need at least Visual Studio 2019
