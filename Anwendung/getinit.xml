@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableDataObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <transportableObjects>
+    <TransportableObject>
+      <Name>Notebook Büro 13"</Name>
+      <RequiredNumber>205</RequiredNumber>
+      <Weight>2451</Weight>
+      <Usefullness>40</Usefullness>
+    </TransportableObject>
+    <TransportableObject>
+      <Name>Notebook Büro 14"</Name>
+      <RequiredNumber>420</RequiredNumber>
+      <Weight>2978</Weight>
+      <Usefullness>35</Usefullness>
+    </TransportableObject>
+    <TransportableObject>
+      <Name>Notebook outdoor</Name>
+      <RequiredNumber>450</RequiredNumber>
+      <Weight>3625</Weight>
+      <Usefullness>80</Usefullness>
+    </TransportableObject>
+    <TransportableObject>
+      <Name>Mobiltelefon Büro</Name>
+      <RequiredNumber>60</RequiredNumber>
+      <Weight>717</Weight>
+      <Usefullness>30</Usefullness>
+    </TransportableObject>
+    <TransportableObject>
+      <Name>Mobiltelefon Outdoor</Name>
+      <RequiredNumber>157</RequiredNumber>
+      <Weight>988</Weight>
+      <Usefullness>60</Usefullness>
+    </TransportableObject>
+    <TransportableObject>
+      <Name>Mobiltelefon Heavy Duty</Name>
+      <RequiredNumber>220</RequiredNumber>
+      <Weight>1220</Weight>
+      <Usefullness>65</Usefullness>
+    </TransportableObject>
+    <TransportableObject>
+      <Name>Tablet Büro klein</Name>
+      <RequiredNumber>620</RequiredNumber>
+      <Weight>1405</Weight>
+      <Usefullness>40</Usefullness>
+    </TransportableObject>
+    <TransportableObject>
+      <Name>Tablet Büro groß</Name>
+      <RequiredNumber>250</RequiredNumber>
+      <Weight>1455</Weight>
+      <Usefullness>40</Usefullness>
+    </TransportableObject>
+    <TransportableObject>
+      <Name>Tablet outdoor klein</Name>
+      <RequiredNumber>540</RequiredNumber>
+      <Weight>1690</Weight>
+      <Usefullness>45</Usefullness>
+    </TransportableObject>
+    <TransportableObject>
+      <Name>Tablet outdoor groß</Name>
+      <RequiredNumber>370</RequiredNumber>
+      <Weight>1980</Weight>
+      <Usefullness>68</Usefullness>
+    </TransportableObject>
+  </transportableObjects>
+  <transporter>
+    <Transporter>
+      <MaxCapacity>1100</MaxCapacity>
+      <WeightOfDriver>72.4</WeightOfDriver>
+    </Transporter>
+    <Transporter>
+      <MaxCapacity>1100</MaxCapacity>
+      <WeightOfDriver>85.7</WeightOfDriver>
+    </Transporter>
+  </transporter>
+</SerializableDataObject>

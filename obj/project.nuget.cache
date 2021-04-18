@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "pZvo+G9jN1i4vdJc9lS45I603Vt6hf6p96MYHY6hx7A93uKEwV5dV9qAcONIsihMfEKmuNdvVr17FbjiLZ/Ysg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Tarik\\source\\repos\\BWI Hardwareverteilung\\BWI Hardwareverteilung.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tarik\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\Tarik\\.nuget\\packages\\mahapps.metro\\2.4.3\\mahapps.metro.2.4.3.nupkg.sha512",
+    "C:\\Users\\Tarik\\.nuget\\packages\\mahapps.metro.iconpacks\\4.8.0\\mahapps.metro.iconpacks.4.8.0.nupkg.sha512",
+    "C:\\Users\\Tarik\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\Tarik\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Tarik\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+  ],
+  "logs": []
+}

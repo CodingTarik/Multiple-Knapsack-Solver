@@ -1,0 +1,127 @@
+﻿<mah:MetroWindow
+    x:Class="BWI_Hardwareverteilung.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:local="clr-namespace:BWI_Hardwareverteilung"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="clr-namespace:BWI_Hardwareverteilung.ViewModels"
+    Title="Optimaler Verteilungsrechner"
+    Width="800"
+    Height="450"
+    DataContext="{DynamicResource MainViewModelDataContext}"
+    mc:Ignorable="d">
+    <mah:MetroWindow.Resources>
+        <viewmodels:MainViewModel x:Key="MainViewModelDataContext" />
+    </mah:MetroWindow.Resources>
+    <Grid>
+        <!--  Tab Control für Dateneingabe & Datenausgabe  -->
+        <TabControl Style="{StaticResource MahApps.Styles.TabControl.Animated}" SelectionChanged="TabControl_SelectionChanged">
+            <!--  Tab für die Dateneingabe  -->
+            <TabItem Header="Dateneingabe">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <!--  Buttons um eingebene Daten zu exportieren oder um Daten zu importieren  -->
+                    <GroupBox
+                        Grid.Row="0"
+                        Margin="10"
+                        Header="Daten exportieren und importieren">
+                        <StackPanel>
+                            <!--  Button um Daten zu importieren  -->
+                            <Button Margin="10" Click="ImportData_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <iconPacks:PackIconMaterialDesign
+                                        Margin="0,0,10,0"
+                                        VerticalAlignment="Center"
+                                        Kind="FileUpload" />
+                                    <TextBlock FontFamily="Roboto" FontSize="15">
+                                        Daten importieren
+                                    </TextBlock>
+                                </StackPanel>
+                            </Button>
+                            <!--  Button um Daten zu exportieren  -->
+                            <Button Margin="10" Click="ExportData_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <iconPacks:PackIconMaterialDesign
+                                        Margin="0,0,10,0"
+                                        VerticalAlignment="Center"
+                                        Kind="CloudDownload" />
+                                    <TextBlock FontFamily="Roboto" FontSize="15">
+                                        Eingegebene Daten exportieren
+                                    </TextBlock>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </GroupBox>
+                    <!--  Felder zum Eingeben der Daten  -->
+                    <GroupBox
+                        Grid.Row="1"
+                        Margin="10"
+                        Header="Eingabe der Daten">
+                        <ScrollViewer>
+                            <StackPanel>
+                                <!-- Info Panel mit kurzen Erlöuterungen zur Eingabe von Daten-->
+                                <StackPanel Orientation="Horizontal" Margin="0, 5, 0, 10">
+                                    <iconPacks:PackIconMaterialDesign
+                                        Width="32"
+                                        Height="32"
+                                        VerticalAlignment="Center"
+                                        Kind="InfoOutline" />
+                                    <Grid Margin="10, 0, 0, 0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="0.5*"></RowDefinition>
+                                            <RowDefinition Height="0.5*"></RowDefinition>
+                                            <RowDefinition Height="0.5*"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <!-- Erklärungssätze für die Dateneingabe-->
+                                        <TextBlock Grid.Row="0" FontSize="14" FontFamily="Roboto" Text="1. Du kannst mit einem Doppelklick unterhalb der letzten Zeile, neue Dateneinträge hinzufügen."></TextBlock>
+                                        <TextBlock Grid.Row="1" FontSize="14" FontFamily="Roboto" Text="2. Mit einem Doppelklick auf bestimmte Daten, kannst du diese verändern."></TextBlock>
+                                        <TextBlock Grid.Row="2" FontSize="14" FontFamily="Roboto" Text="3. Um Einträge zu entfernen, wähle die jeweilige Zeile mit einem Mausklick aus und drücke dann die Entfernen-Taste."></TextBlock>
+                                    </Grid>
+                                </StackPanel>
+                                <!-- Transportliste zum bearbeiten-->
+                                <TextBlock
+                                    FontFamily="Roboto"
+                                    FontSize="16"
+                                    FontWeight="Medium"
+                                    Text="Transporterdaten" />
+                                <DataGrid AutoGenerateColumns="True" ItemsSource="{Binding TransporterList}" />
+                                <!-- Objektliste zum bearbeiten-->
+                                <TextBlock
+                                    FontFamily="Roboto"
+                                    FontSize="16"
+                                    FontWeight="Medium"
+                                    Text="Objektdaten" />
+                                <DataGrid AutoGenerateColumns="True" ItemsSource="{Binding TransportableObjectsList}" />
+                            </StackPanel>
+                        </ScrollViewer>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <!--  Tab für die Datenausgabe  -->
+            <TabItem Header="Optimale Verteilung" MouseDown="Partition_Click">
+                <StackPanel>
+                    <GroupBox Header="Score" Margin="4">
+                        <TextBlock Text="{Binding ResultScore}" FontSize="20" FontFamily="Roboto"></TextBlock>
+                    </GroupBox>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" >
+                        <ListView ItemsSource="{Binding TransporterList}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <GroupBox Header="{Binding TruckName}">
+                                        <TextBlock Text="{Binding ResultText}"></TextBlock>
+                                    </GroupBox>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</mah:MetroWindow>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializeableDataObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <transportableObjects>
+    <TransportableObject>
+      <Name>test</Name>
+      <RequiredNumber>0</RequiredNumber>
+      <Weight>0</Weight>
+      <Usefullness>0</Usefullness>
+    </TransportableObject>
+  </transportableObjects>
+  <transporter>
+    <Transporter>
+      <MaxCapacity>1</MaxCapacity>
+      <WeightOfDriver>0</WeightOfDriver>
+    </Transporter>
+  </transporter>
+</SerializeableDataObject>
